@@ -101,12 +101,14 @@
       }
     }
 
-    // COPY FUNCTION
+    // COPY FUNCTION WITH MESSAGE HEADER
     function copyData() {
       const text = document.getElementById("result").innerText;
 
-      navigator.clipboard.writeText(text).then(() => {
-        //alert("Copied successfully!");
+      const message = "These are rounds with numbers taken from a keno game can you predict 4 numbers in the next round?\n\n";
+
+      navigator.clipboard.writeText(message + text).then(() => {
+        alert("Copied successfully!");
       });
     }
   </script>
